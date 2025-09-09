@@ -20,6 +20,7 @@ Table t = new Table()              // Create new Table instance
 
 ## Level 1: t.beginScope()
 
+**Command:** t.beginScope()
 **Action:** Push new scope marker
 
 **Table State After:**
