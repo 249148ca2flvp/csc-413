@@ -18,7 +18,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 1: t.beginScope()
+## Level 1: t.beginScope()
 
 **Action:** Push new scope marker
 
@@ -29,7 +29,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 2: t.put(s, "top-level a")
+## Level 1: t.put(s, "top-level a")
 
 **Action:** Put Symbol("a", 1) → "top-level a"
 
@@ -43,7 +43,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 3: t.put(s1, "top-level b")
+## Level 1: t.put(s1, "top-level b")
 
 **Action:** Put Symbol("b", 2) → "top-level b"
 
@@ -61,7 +61,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 4: t.beginScope()
+## Level 2: t.beginScope()
 
 **Action:** Start new nested scope
 
@@ -79,7 +79,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 5: t.put(s2, "second-level c")
+## Level 2: t.put(s2, "second-level c")
 
 **Action:** Put Symbol("c", 3) → "second-level c"
 
@@ -99,7 +99,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 6: t.put(s, "second-level a")
+## Level 2: t.put(s, "second-level a")
 
 **Action:** Put Symbol("a", 1) → "second-level a" (shadows existing "a")
 
@@ -119,7 +119,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 7: t.endScope()
+## Level 2: t.endScope()
 
 **Action:** End nested scope, restore to previous scope state
 
@@ -152,7 +152,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 8: t.put(s2, "top-level c")
+## Level 1: t.put(s2, "top-level c")
 
 **Action:** Put Symbol("c", 3) → "top-level c"
 
@@ -172,7 +172,7 @@ Table t = new Table()              // Create new Table instance
 
 ---
 
-## Step 9: t.endScope()
+## Level 1: t.endScope()
 
 **Action:** End outer scope
 
